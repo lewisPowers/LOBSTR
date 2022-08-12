@@ -1,6 +1,8 @@
 let trustedAssets = document.getElementsByClassName('trusted-asset-list');
 
-let allAssetsCount = trustedAssets[0].children.length;
+function allAssetsCount() {
+  return trustedAssets[0].children.length;
+}
 
 function filledAssetsCount() {
   return Array.from(trustedAssets[0].children).filter((asset) => {
@@ -15,7 +17,7 @@ function unfilledAssetsCount() {
 }
 
 console.log(
-  `Total Assets: ${allAssetsCount}`,
+  `Total Assets: ${allAssetsCount()}`,
   `\nTotal Filled Assets: ${filledAssetsCount()}`,
   `\nTotal Uncharted Assets: ${unfilledAssetsCount()}`
 )
