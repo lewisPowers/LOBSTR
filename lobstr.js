@@ -29,7 +29,6 @@ let namesArray = [
 ]
 
 function createEl(content) {
-  console.log(content.name)
   let el = document.createElement('span');
   el.style.display = 'block';
   el.textContent = names[content];
