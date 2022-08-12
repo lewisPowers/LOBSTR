@@ -16,6 +16,31 @@ function unfilledAssetsCount() {
   }).length;
 }
 
+let names = {
+  allAssetsCount: `Total Assets: ${allAssetsCount()}`,
+  filledAssetsCount: `Total Filled Assets: ${filledAssetsCount()}`,
+  unfilledAssetsCount: `Total Uncharted Assets: ${unfilledAssetsCount()}`
+}
+
+let namesArray = [
+  'allAssetsCount',
+  'filledAssetsCount',
+  'unfilledAssetsCount'
+]
+
+function createEl(content) {
+  console.log(content.name)
+  let el = document.createElement('span');
+  el.style.display = 'block';
+  el.textContent = names[content];
+  document.getElementsByClassName('title-extra')[1].append(el)
+}
+
+namesArray.forEach((fnName) => {
+  createEl(fnName);
+})
+
+
 console.log(
   `Total Assets: ${allAssetsCount()}`,
   `\nTotal Filled Assets: ${filledAssetsCount()}`,
