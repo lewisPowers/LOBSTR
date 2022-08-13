@@ -140,6 +140,7 @@ function displayTotals() {
 }
 
 displayTotals();
+mergeAllAssetsInfoIntoCSVString()
 
 console.log(
   `Total Assets: ${allAssetsCount()}`,
