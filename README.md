@@ -48,7 +48,8 @@
 
   <img width="500" alt="Screen Shot 2022-08-13 at 8 26 45 PM" src="https://user-images.githubusercontent.com/52840741/184521404-df45cf0c-e6fc-4cbc-ab8c-4ba0d77b7349.png">
   
-  - In Firefox, right click on message and click 'Copy Object'
+  
+- In Firefox, right click on message and click 'Copy Object'
   
   <img width="500" alt="Screen Shot 2022-08-14 at 1 59 55 PM" src="https://user-images.githubusercontent.com/52840741/184554773-9cc5ae27-77c4-4a11-8ef1-cadc14ef8924.png">
   
