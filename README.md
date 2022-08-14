@@ -17,6 +17,8 @@
 - Compatible on all browsers
 
 - Data is extracted on the client side - no worries about third party interference or needless HTTP requests
+
+- Generate a new, updated spreadsheet as often as you want 
  
 - Extra feature: displays the counts of your total trustlines and 'uncharted' assets on the browser window
 
