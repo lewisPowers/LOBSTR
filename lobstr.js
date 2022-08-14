@@ -29,7 +29,10 @@ function mergeAllAssetsInfoIntoCSVString() {
   for (let i = 0; i < len; i++) {
     array.push(mergeInfoIntoCSVFormat(i))
   }
-  return array.join(` CRLF `);
+  // let result = array.join(` CRLF `);
+  let result = array.join(`\n`);
+  console.log(result);
+  // return result;
 }
 
 function mergeInfoIntoCSVFormat(index) {
@@ -139,11 +142,18 @@ function displayTotals() {
   })
 }
 
-displayTotals();
-mergeAllAssetsInfoIntoCSVString()
-
 console.log(
   `Total Assets: ${allAssetsCount()}`,
   `\nTotal Filled Assets: ${filledAssetsCount()}`,
   `\nTotal Uncharted Assets: ${unfilledAssetsCount()}`
 )
+
+displayTotals();
+mergeAllAssetsInfoIntoCSVString();
+// delayCSVDelivery();
+
+function delayCSVDelivery() {
+  setTimeout(() => {
+    mergeAllAssetsInfoIntoCSVString();
+  }, 5000)
+}
