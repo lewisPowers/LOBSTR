@@ -2,23 +2,23 @@
 
 ## Frontend program allows users to quickly generate a spreadsheet their assets
 
- ### - Get all your assets complied into a CSV-readable format
+- Get all your assets complied into a CSV-readable format
  
- ### - Data extrated includes: 
-   ### - Asset name, 
-   ### - Token symbol, 
-   ### - Amount of tokens, 
-   ### - Value of tokens, 
-   ### - Domain name, & 
-   ### - Issuer address
+- Data extracted includes: 
+   - Asset name
+   - Token symbol
+   - Amount of tokens
+   - Value of tokens
+   - Domain name 
+   - Issuer address
  
- ### - Compatible with any spreadsheet software
+- Compatible with any spreadsheet software
  
- ### - Compatible on all browsers
+- Compatible on all browsers
 
- ### - Data is extracted on the client side - no worries about third party interference or needless HTTP requests
+- Data is extracted on the client side - no worries about third party interference or needless HTTP requests
  
- ### - Extra feature: displays the counts of your total trustlines and 'uncharted' assets on the browser window
+- Extra feature: displays the counts of your total trustlines and 'uncharted' assets on the browser window
 
 # ___Directions___
 
