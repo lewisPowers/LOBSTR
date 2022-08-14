@@ -2,6 +2,12 @@ let trustedAssetsList = document.getElementsByClassName('trusted-asset-list')[0]
 let allAssetsCollection =  trustedAssetsList.children;
 let assetsArray = Array.from(allAssetsCollection);
 
+let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'));
+currencyAmountsArray = currencyAmountsArray.map(amount => {
+  return amount.textContent;
+})
+console.log(currencyAmountsArray)
+
 let formattedNamesAndCodes = formatArrays(getAssetNamesCodesDomainsArrays());
 let formattedAmounts = formatArrays(getTokenAmountAndCurrencyArrays());
 let issuers = getAssetIssuersArray()
@@ -37,7 +43,7 @@ function mergeInfoIntoCSVFormat(index) {
   let name = getNamesArray()[index];
   let code = getCodesArray()[index];
   let tokens = getAmountsInToken()[index];
-  let currencyAmount = getAmountsInCurrency()[index];
+  let currencyAmount = currencyAmountsArray[index];
   let domain = getDomainsArray()[index];
   let issuer = issuers[index] || null;
   return `${name},${code},${tokens},${currencyAmount},${domain},${issuer}`;
@@ -121,8 +127,8 @@ function getAmountsInToken() {
 }
 
 function getAmountsInCurrency() {
-  console.log(formattedAmounts)
-  return formattedAmounts.map(array => {
+  return formattedAmounts.map( (array, i) => {
+    if (i === 14) console.log(array)
     return array[2];
   })
 }
