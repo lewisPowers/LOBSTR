@@ -30,7 +30,7 @@
   
   <img height="250" alt="Screen Shot 2022-08-13 at 8 32 34 PM" src="https://user-images.githubusercontent.com/52840741/184521315-353de06f-3da6-4b5d-a531-1c0996f9f50a.png"> <img height="250" alt="Screen Shot X" src="https://user-images.githubusercontent.com/52840741/184521597-05d370e6-22d7-4651-9543-08c014795149.png"> <img height="250" alt="Screen Shot 2022-08-13 at 8 33 26 PM" src="https://user-images.githubusercontent.com/52840741/184521339-ba6cbecc-c4c5-4cc9-b155-40966e243673.png">
 
-- Go to github.com/lewisPowers/LOBSTR, click on lobstr.js file & click copy icon 
+- Go to github.com/lewisPowers/LOBSTR (you're here!), click on lobstr.js file & click copy icon 
 
   <img height="260" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img height="260" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
  
