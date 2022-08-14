@@ -45,10 +45,11 @@
   <img width="300" alt="Screen Shot 2022-08-13 at 8 26 05 PM" src="https://user-images.githubusercontent.com/52840741/184521395-375bf03a-76c0-4d54-b230-d29b46f1af10.png">
 
 - Copy the string that is generated in the console
+  - In Firefox, right click on message and click 'Copy Object'
 
   <img width="500" alt="Screen Shot 2022-08-13 at 8 26 45 PM" src="https://user-images.githubusercontent.com/52840741/184521404-df45cf0c-e6fc-4cbc-ab8c-4ba0d77b7349.png">
   
-- Notice the new information displayed on the webpage?
+  - Notice the new information displayed on the webpage?
 
   <img width="237" alt="Screen Shot 2022-08-13 at 8 51 03 PM" src="https://user-images.githubusercontent.com/52840741/184521689-14b3de55-4a6a-4941-b0e2-6c7e743a7a2f.png">
 
