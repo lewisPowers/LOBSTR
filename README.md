@@ -50,7 +50,7 @@
   - Save file as .csv file
   - Open your new .csv file in any spreadsheet software
   
-  <img height="218" alt="Screen Shot 2022-08-13 at 8 28 43 PM" src="https://user-images.githubusercontent.com/52840741/184521421-d72c5890-27c2-49c1-b62e-4eea59c0272a.png"> <img height="218" alt="Screen Shot 2022-08-13 at 9 12 30 PM" src="https://user-images.githubusercontent.com/52840741/184522185-a4e0e736-dfab-47fa-9e40-10f60d04f95d.png">
+  <img height="180" alt="Screen Shot 2022-08-13 at 8 28 43 PM" src="https://user-images.githubusercontent.com/52840741/184521421-d72c5890-27c2-49c1-b62e-4eea59c0272a.png"> <img height="180" alt="Screen Shot 2022-08-13 at 9 12 30 PM" src="https://user-images.githubusercontent.com/52840741/184522185-a4e0e736-dfab-47fa-9e40-10f60d04f95d.png">
 
   <img width="650" alt="Screen Shot 2022-08-13 at 8 30 05 PM" src="https://user-images.githubusercontent.com/52840741/184521424-47635c18-f2d5-430b-a0c9-86c0d3dd5272.png">
 
