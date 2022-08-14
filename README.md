@@ -22,9 +22,7 @@
 
 - Go to github.com/lewisPowers/LOBSTR, click on & copy lobstr.js file
 
-  <img width="400" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> 
-
-  <img width="400" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
+  <img width="360" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img width="580" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
  
 - Click back to your assets page;
   - Paste code from lobstr.js file into console
@@ -44,9 +42,11 @@
   - Save file as .csv file
   - Open your new .csv file in any spreadsheet software
   
-  <img width="400" alt="Screen Shot 2022-08-13 at 8 28 43 PM" src="https://user-images.githubusercontent.com/52840741/184521421-d72c5890-27c2-49c1-b62e-4eea59c0272a.png"> <img width="400" alt="Screen Shot 2022-08-13 at 8 30 05 PM" src="https://user-images.githubusercontent.com/52840741/184521424-47635c18-f2d5-430b-a0c9-86c0d3dd5272.png">
+  <img height="218" alt="Screen Shot 2022-08-13 at 8 28 43 PM" src="https://user-images.githubusercontent.com/52840741/184521421-d72c5890-27c2-49c1-b62e-4eea59c0272a.png"> <img height="218" alt="Screen Shot 2022-08-13 at 9 12 30 PM" src="https://user-images.githubusercontent.com/52840741/184522185-a4e0e736-dfab-47fa-9e40-10f60d04f95d.png">
 
-  <img width="500" alt="Screen Shot 2022-08-13 at 8 31 10 PM" src="https://user-images.githubusercontent.com/52840741/184521436-60ed045e-6512-4573-91ad-2de7dac5fc03.png">
+  <img width="650" alt="Screen Shot 2022-08-13 at 8 30 05 PM" src="https://user-images.githubusercontent.com/52840741/184521424-47635c18-f2d5-430b-a0c9-86c0d3dd5272.png">
+
+  <img width="650" alt="Screen Shot 2022-08-13 at 8 31 10 PM" src="https://user-images.githubusercontent.com/52840741/184521436-60ed045e-6512-4573-91ad-2de7dac5fc03.png">
   
 ### Repeat Process as often as you'd like to make a snapshot of your assets and their info, anytime!
  
