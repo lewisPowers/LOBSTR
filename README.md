@@ -28,7 +28,8 @@
 
 - Desktop or laptop computer with:
   - Your preferred Web Browser
-  - Your preferred Text Editor: Notepad, TextEdit, VSCode, Atom, Sublime Text, etc.
+  - Your preferred Text Editor: Notepad, VSCode, Atom, Sublime Text, etc.
+  - Note: Not all text editors will work. For instance, TextEdit is not a good option
   - Your preferred Spreadsheet Software: Excel, Numbers, etc.
 
 ## ___Directions___
