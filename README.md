@@ -70,7 +70,7 @@ Would you like to collaborate and help make this better?
 
 Please feel free to let me know! Telegram: @Aquarian_Diver
 
-#### ___Donations___
+### ___Donations___
 
 #### xlmlp*lobstr.co
 
