@@ -4,6 +4,14 @@
 
  ### - Get all your assets complied into a CSV-readable format
  
+ ### - Data extrated includes: 
+   ### - Asset name, 
+   ### - Token symbol, 
+   ### - Amount of tokens, 
+   ### - Value of tokens, 
+   ### - Domain name, & 
+   ### - Issuer address
+ 
  ### - Compatible with any spreadsheet software
  
  ### - Compatible on all browsers
