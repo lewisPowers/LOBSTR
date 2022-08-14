@@ -1,2 +1,6 @@
+.gitignore
 .DS_Store
 README.md
+test.html
+assets_8-12-22.csv
+.vscode
