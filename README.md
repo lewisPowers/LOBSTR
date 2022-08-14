@@ -26,6 +26,8 @@
 
 # ___Directions___
 
+##### Note: click any image to get an enlarged image is a new tab!
+
 - Log in to your lobstr account and navigate to your assets page; 
   - Open dev tools (right click, click 'inspect')
   - Click on 'console' tab
