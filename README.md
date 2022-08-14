@@ -71,7 +71,7 @@
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets and their info, anytime!
 
-## [Video Tutorial](https://www.youtube.com/channel/UCU9d_NZh_8irYTEqrnoktuQ "Watch tutorial")
+### [Watch Video Tutorial](https://www.youtube.com/channel/UCU9d_NZh_8irYTEqrnoktuQ "Watch tutorial")
  
 Is this program helpful for you? 
 
