@@ -30,7 +30,7 @@
 
 - Go to github.com/lewisPowers/LOBSTR, click on lobstr.js file & click copy icon 
 
-  <img height="360" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img height="360" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
+  <img height="260" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img height="260" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
  
 - Click back to your assets page;
   - Paste code from lobstr.js file (that we copied in the previous step) into console
