@@ -1,6 +1,6 @@
 # ___LOBSTR ASSETS___
 
-## ___Frontend CSV generator___
+## ___Frontend CSV generator using Javascript___
 
 ### Allows users to quickly generate a spreadsheet of all their assets
 
