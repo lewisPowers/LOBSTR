@@ -52,7 +52,7 @@
  
 Did this program help you? Is there additional features you'd like to see? Would you like to collaborate to make this better? Please feel free to let me know! Telegram: @Aquarian_Diver
 
-#### Please donate to the cause 
+#### Donations: 
 
 #### xlmlp*lobstr.co
 
