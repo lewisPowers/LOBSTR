@@ -38,7 +38,7 @@
   
 - Notice the new information displayed on the webpage?
 
-<img width="237" alt="Screen Shot 2022-08-13 at 8 51 03 PM" src="https://user-images.githubusercontent.com/52840741/184521689-14b3de55-4a6a-4941-b0e2-6c7e743a7a2f.png">
+  <img width="237" alt="Screen Shot 2022-08-13 at 8 51 03 PM" src="https://user-images.githubusercontent.com/52840741/184521689-14b3de55-4a6a-4941-b0e2-6c7e743a7a2f.png">
 
 - Paste string into any text editor
   - Save file as .csv file
