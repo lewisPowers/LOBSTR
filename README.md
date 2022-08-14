@@ -1,6 +1,8 @@
 # ___LOBSTR ASSETS___
 
-## Frontend program allows users to quickly generate a spreadsheet of their assets
+## Frontend CSV generator
+
+### Allows users to quickly generate a spreadsheet of all their assets
 
 - Get all your assets complied into a CSV-readable format
  
