@@ -33,7 +33,7 @@
   <img width="360" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img width="580" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
  
 - Click back to your assets page;
-  - Paste code from lobstr.js file into console
+  - Paste code from lobstr.js file (that we copied in the previous step) into console
   - Press 'enter' or 'return'
   
   <img width="300" alt="Screen Shot 2022-08-13 at 8 26 05 PM" src="https://user-images.githubusercontent.com/52840741/184521395-375bf03a-76c0-4d54-b230-d29b46f1af10.png">
@@ -58,7 +58,7 @@
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets and their info, anytime!
  
-Did this program help you? Is there additional features you'd like to see? Would you like to collaborate to make this better? Please feel free to let me know! Telegram: @Aquarian_Diver
+Did this program help you? Is there additional features you'd like to see? Would you like to collaborate and help make this better? Please feel free to let me know! Telegram: @Aquarian_Diver
 
 #### Donations: 
 
