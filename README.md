@@ -26,10 +26,10 @@
 
 # ___Directions___
 
-##### Note: click any image to get an enlarged image is a new tab!
+##### Note: click any image to get an enlarged version in a new tab!
 
 - Log in to your lobstr account and navigate to your assets page; 
-  - Open dev tools (right click, click 'inspect')
+  - Open dev tools (right click on your browser window, click 'inspect')
   - Click on 'console' tab
   
   <img height="250" alt="Screen Shot 2022-08-13 at 8 32 34 PM" src="https://user-images.githubusercontent.com/52840741/184521315-353de06f-3da6-4b5d-a531-1c0996f9f50a.png"> <img height="250" alt="Screen Shot X" src="https://user-images.githubusercontent.com/52840741/184521597-05d370e6-22d7-4651-9543-08c014795149.png"> <img height="250" alt="Screen Shot 2022-08-13 at 8 33 26 PM" src="https://user-images.githubusercontent.com/52840741/184521339-ba6cbecc-c4c5-4cc9-b155-40966e243673.png">
@@ -70,6 +70,8 @@
   <img width="650" alt="Screen Shot 2022-08-13 at 8 31 10 PM" src="https://user-images.githubusercontent.com/52840741/184521436-60ed045e-6512-4573-91ad-2de7dac5fc03.png">
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets and their info, anytime!
+
+## Video Tutorial: 
  
 Is this program helpful for you? 
 
