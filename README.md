@@ -2,7 +2,7 @@
 
 ## ___Frontend CSV generator using Javascript___
 
-### Allows users to quickly generate a spreadsheet of all their assets
+### Allows users to quickly generate a spreadsheet of assets
 
 - Get all your assets complied into a CSV-readable format
  
