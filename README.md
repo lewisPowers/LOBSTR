@@ -26,7 +26,7 @@
   - Open dev tools (right click, click 'inspect')
   - Click on 'console' tab
   
-  <img width="250" alt="Screen Shot 2022-08-13 at 8 32 34 PM" src="https://user-images.githubusercontent.com/52840741/184521315-353de06f-3da6-4b5d-a531-1c0996f9f50a.png"> <img width="350" alt="Screen Shot X" src="https://user-images.githubusercontent.com/52840741/184521597-05d370e6-22d7-4651-9543-08c014795149.png"> <img width="350" alt="Screen Shot 2022-08-13 at 8 33 26 PM" src="https://user-images.githubusercontent.com/52840741/184521339-ba6cbecc-c4c5-4cc9-b155-40966e243673.png">
+  <img height="250" alt="Screen Shot 2022-08-13 at 8 32 34 PM" src="https://user-images.githubusercontent.com/52840741/184521315-353de06f-3da6-4b5d-a531-1c0996f9f50a.png"> <img height="250" alt="Screen Shot X" src="https://user-images.githubusercontent.com/52840741/184521597-05d370e6-22d7-4651-9543-08c014795149.png"> <img height="250" alt="Screen Shot 2022-08-13 at 8 33 26 PM" src="https://user-images.githubusercontent.com/52840741/184521339-ba6cbecc-c4c5-4cc9-b155-40966e243673.png">
 
 - Go to github.com/lewisPowers/LOBSTR, click on lobstr.js file & click copy icon 
 
