@@ -62,7 +62,13 @@
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets and their info, anytime!
  
-Did this program help you? Is there additional features you'd like to see? Would you like to collaborate and help make this better? Please feel free to let me know! Telegram: @Aquarian_Diver
+Is this program helpful for you? 
+
+Is there additional features you'd like to see? 
+
+Would you like to collaborate and help make this better? 
+
+Please feel free to let me know! Telegram: @Aquarian_Diver
 
 #### Donations: 
 
