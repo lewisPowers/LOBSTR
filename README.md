@@ -56,7 +56,7 @@
 
   <img width="650" alt="Screen Shot 2022-08-13 at 8 31 10 PM" src="https://user-images.githubusercontent.com/52840741/184521436-60ed045e-6512-4573-91ad-2de7dac5fc03.png">
   
-### Repeat Process as often as you'd like to make a snapshot of your assets and their info, anytime!
+### Repeat this process as often as you'd like to make a snapshot of your assets and their info, anytime!
  
 Did this program help you? Is there additional features you'd like to see? Would you like to collaborate to make this better? Please feel free to let me know! Telegram: @Aquarian_Diver
 
