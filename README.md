@@ -24,14 +24,14 @@
  
 - Extra feature: displays the counts of your total trustlines and 'uncharted' assets on the browser window
 
-# ___What you need___
+## ___What you need___
 
 - Desktop or laptop computer with:
   - Your preferred Web Browser
   - Your preferred Text Editor: Notepad, TextEdit, VSCode, Atom, Sublime Text, etc.
   - Your preferred Spreadsheet Software: Excel, Numbers, etc.
 
-# ___Directions___
+## ___Directions___
 
 ##### Note: click any image to get an enlarged version in a new tab!
 
