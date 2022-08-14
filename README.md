@@ -80,7 +80,7 @@
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets & respective info, anytime!
 
-### [Watch Video Tutorial](https://www.youtube.com/channel/UCU9d_NZh_8irYTEqrnoktuQ "Watch tutorial")
+### [Watch Video Tutorial](https://www.loom.com/share/42a25d9c44a74c76b33cdb0ff7be2c3f "Watch tutorial")
  
 Is this program helpful for you? 
 
