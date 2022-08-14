@@ -47,7 +47,7 @@
  
 - Click back to your assets page;
   - Paste code from lobstr.js file (that we copied in the previous step) into console
-  - Press 'enter' or 'return'
+  - Press 'enter' or 'return' to run the code
   
   <img width="300" alt="Screen Shot 2022-08-13 at 8 26 05 PM" src="https://user-images.githubusercontent.com/52840741/184521395-375bf03a-76c0-4d54-b230-d29b46f1af10.png">
 
