@@ -1,23 +1,23 @@
-let trustedAssetsList = document.getElementsByClassName('trusted-asset-list');
-let allAssets =  trustedAssetsList[0].children;
-let assetsArray = Array.from(allAssets);
+let trustedAssetsList = document.getElementsByClassName('trusted-asset-list')[0];
+let allAssetsCollection =  trustedAssetsList.children;
+let assetsArray = Array.from(allAssetsCollection);
 
 let formattedNamesAndCodes = formatArrays(getAssetNamesCodesDomainsArrays());
 let formattedAmounts = formatArrays(getTokenAmountAndCurrencyArrays());
 let issuers = getAssetIssuersArray()
 
 function allAssetsCount() {
-  return trustedAssetsList[0].children.length;
+  return trustedAssetsList.children.length;
 }
 
 function filledAssetsCount() {
-  return Array.from(trustedAssetsList[0].children).filter((asset) => {
+  return Array.from(trustedAssetsList.children).filter((asset) => {
     if (!asset.children[1].textContent.includes(' 0 ')) return asset;
   }).length;
 }
 
 function unfilledAssetsCount() {
-  return Array.from(trustedAssetsList[0].children).filter((asset) => {
+  return Array.from(trustedAssetsList.children).filter((asset) => {
     if (asset.children[1].textContent.includes(' 0 ')) return asset;
   }).length;
 }
@@ -29,10 +29,8 @@ function mergeAllAssetsInfoIntoCSVString() {
   for (let i = 0; i < len; i++) {
     array.push(mergeInfoIntoCSVFormat(i))
   }
-  // let result = array.join(` CRLF `);
   let result = array.join(`\n`);
   console.log(result);
-  // return result;
 }
 
 function mergeInfoIntoCSVFormat(index) {
@@ -41,7 +39,7 @@ function mergeInfoIntoCSVFormat(index) {
   let tokens = getAmountsInToken()[index];
   let currencyAmount = getAmountsInCurrency()[index];
   let domain = getDomainsArray()[index];
-  let issuer = issuers[index];
+  let issuer = issuers[index] || null;
   return `${name},${code},${tokens},${currencyAmount},${domain},${issuer}`;
 }
 
@@ -68,12 +66,6 @@ function getTokenAmountAndCurrencyArrays() {
   })
 }
 
-function getAssetIssuersArray() {
-  return assetsArray.map(asset => {
-    return asset.dataset.assetIssuer;
-  })
-}
-
 function formatArrays(namesCodesDomainsArray) {
   return namesCodesDomainsArray.map(assetArray => {
     if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push(null);
@@ -92,9 +84,21 @@ function getNamesArray() {
   })
 }
 
+// function getNamesArray() {
+//   return assetsArray.map(asset => {
+//     return asset.dataset.name;
+//   })
+// }
+
+// function getCodesArray() {
+//   return formattedNamesAndCodes.map(array => {
+//     return array[1];
+//   })
+// }
+
 function getCodesArray() {
-  return formattedNamesAndCodes.map(array => {
-    return array[1];
+  return assetsArray.map(asset => {
+    return asset.dataset.assetCode;
   })
 }
 
@@ -104,16 +108,28 @@ function getDomainsArray() {
   })
 }
 
-// takes formatted array from formattedAmounts array
+// function getAmountsInToken() {
+//   return formattedAmounts.map(array => {
+//     return array[0];
+//   })
+// }
+
 function getAmountsInToken() {
-  return formattedAmounts.map(array => {
-    return array[0];
+  return assetsArray.map(asset => {
+    return asset.dataset.raw_amount;
   })
 }
 
 function getAmountsInCurrency() {
+  console.log(formattedAmounts)
   return formattedAmounts.map(array => {
     return array[2];
+  })
+}
+
+function getAssetIssuersArray() {
+  return assetsArray.map(asset => {
+    return asset.dataset.assetIssuer;
   })
 }
 
@@ -124,11 +140,12 @@ function displayTotals() {
     unfilledAssetsCount: `Total Uncharted Assets: ${unfilledAssetsCount()}`
   }
 
-  let namesArray = [
-    'allAssetsCount',
-    'filledAssetsCount',
-    'unfilledAssetsCount'
-  ]
+  // let namesArray = [
+  //   'allAssetsCount',
+  //   'filledAssetsCount',
+  //   'unfilledAssetsCount'
+  // ]
+  let namesArray = Object.keys(names);
 
   function createEl(content) {
     let el = document.createElement('span');
@@ -150,10 +167,11 @@ console.log(
 
 displayTotals();
 mergeAllAssetsInfoIntoCSVString();
+
 // delayCSVDelivery();
 
-function delayCSVDelivery() {
-  setTimeout(() => {
-    mergeAllAssetsInfoIntoCSVString();
-  }, 5000)
-}
+// function delayCSVDelivery() {
+//   setTimeout(() => {
+//     mergeAllAssetsInfoIntoCSVString();
+//   }, 5000)
+// }
