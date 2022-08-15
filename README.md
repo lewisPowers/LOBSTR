@@ -46,6 +46,12 @@
 
   <img height="260" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img height="260" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
  
+- Some browsers may not show a copy icon. In that case, instead click 'Raw' & select all and copy from there.
+
+<img height="250" alt="Screen Shot 2022-08-15 at 4 52 00 PM" src="https://user-images.githubusercontent.com/52840741/184755544-7a8eb7c0-2ec7-4580-84b3-7fcadc24ab2e.png"> <img height="250" alt="Screen Shot 2022-08-15 at 4 52 15 PM" src="https://user-images.githubusercontent.com/52840741/184755554-b24acbf5-8a01-4bd0-8397-027df414ff9a.png">
+
+  <img height="260" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img height="260" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
+ 
 - Click back to your assets page;
   - Paste code from lobstr.js file (that we copied in the previous step) into console
   - Press 'enter' or 'return' to run the code
