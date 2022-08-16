@@ -1,6 +1,6 @@
 let trustedAssetsList = document.getElementsByClassName('trusted-asset-list')[0];
 let assetsArray = Array.from(trustedAssetsList.children);
-let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency')).map(amount => {
+let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency')).map( amount => {
   return amount.textContent;
 })
 
@@ -12,9 +12,7 @@ function mergeAllAssetsInfoIntoCSVString() {
   let len = allAssetsCount();
   let array = [];
   array[0] = `name,code,asset_amount,currency_amount,domain,asset_issuer`;
-  for (let i = 0; i < len; i++) {
-    array.push(mergeInfoIntoCSVFormat(i))
-  }
+  for (let i = 0; i < len; i++) array.push(mergeInfoIntoCSVFormat(i));
   let result = array.join(`\n`);
   console.log(result);
 }
@@ -34,19 +32,19 @@ function allAssetsCount() {
 }
 
 function filledAssetsCount() {
-  return assetsArray.filter((asset) => {
+  return assetsArray.filter( asset => {
     if (!asset.children[1].textContent.includes(' 0 ')) return asset;
   }).length;
 }
 
 function unfilledAssetsCount() {
-  return assetsArray.filter((asset) => {
+  return assetsArray.filter( asset => {
     if (asset.children[1].textContent.includes(' 0 ')) return asset;
   }).length;
 }
 
 function getAssetData(context) {
-  return assetsArray.map(asset => {
+  return assetsArray.map( asset => {
     asset = context === 'namesCodesDomains' ? asset.children[0].children[0].children[1] : asset.children[1];
     return asset.textContent
     .trim()
@@ -58,7 +56,7 @@ function getAssetData(context) {
 }
 
 function formatArrays(namesCodesDomainsArray) {
-  return namesCodesDomainsArray.map(assetArray => {
+  return namesCodesDomainsArray.map( assetArray => {
     if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push(null);
     while (assetArray.length > 3 && !assetArray[1].includes('(')) {
       assetArray[0] = `${assetArray[0]} ${assetArray.splice(1, 1)}`;
@@ -70,7 +68,7 @@ function formatArrays(namesCodesDomainsArray) {
 }
 
 function getNamesArray() {
-  return formattedNamesAndCodes.map(array => {
+  return formattedNamesAndCodes.map( array => {
     return array[0];
   })
 }
@@ -82,7 +80,7 @@ function getCodesArray() {
 }
 
 function getDomainsArray() {
-  return formattedNamesAndCodes.map(array => {
+  return formattedNamesAndCodes.map( array => {
     return array[2] === null ? 'No Domain' : array[2];
   })
 }
@@ -94,13 +92,13 @@ function getAmountsInToken() {
 }
 
 function getAmountsInCurrency() {
-  return formattedAmounts.map( (array, i) => {
+  return formattedAmounts.map( array => {
     return array[2];
   })
 }
 
 function getAssetIssuersArray() {
-  return assetsArray.map(asset => {
+  return assetsArray.map( asset => {
     return asset.dataset.assetIssuer;
   })
 }
@@ -124,12 +122,6 @@ function displayTotals() {
     document.getElementsByClassName('title-extra')[1].append(el)
   }
 }
-
-console.log(
-  `Total Assets: ${allAssetsCount()}`,
-  `\nTotal Filled Assets: ${filledAssetsCount()}`,
-  `\nTotal Uncharted Assets: ${unfilledAssetsCount()}`
-)
 
 displayTotals();
 mergeAllAssetsInfoIntoCSVString();
