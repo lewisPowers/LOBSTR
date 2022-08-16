@@ -71,7 +71,7 @@
 
   <img width="237" alt="Screen Shot 2022-08-13 at 8 51 03 PM" src="https://user-images.githubusercontent.com/52840741/184521689-14b3de55-4a6a-4941-b0e2-6c7e743a7a2f.png">
 
-- Paste string into any text editor.
+- Paste text string into any text editor.
   - Text editors: Notepad, TextEdit, VSCode, Atom, Sublime Text, etc.
     - Notepad comes preinstalled on Windows
     - TextEdit comes preinstalled on Mac (you'll need an extra step: see next line)
