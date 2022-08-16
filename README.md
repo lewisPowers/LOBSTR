@@ -88,7 +88,7 @@
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets & respective info, anytime!
 
-### [Watch Video Tutorial](https://www.loom.com/share/42a25d9c44a74c76b33cdb0ff7be2c3f "Watch tutorial")
+### [Watch Video Tutorial](https://youtu.be/EVYUjsRSu9U "Watch tutorial")
 
 ### [Cheatsheet & FAQ](https://docs.google.com/document/d/1mYQdCSH4qxHTqy9oGd49UH2HLA0PU5u4HPtqDZnJKqQ/edit?usp=sharing "Get the cheatsheet")
  
