@@ -28,7 +28,7 @@
 
 - Desktop or laptop computer with:
   - Your preferred Web Browser
-  - Your preferred Text Editor: Notepad, VSCode, Atom, Sublime Text, etc.
+  - Your preferred Text Editor: Notepad, TextEdit, VSCode, Atom, Sublime Text, etc.
   - Note: Not all text editors will work. For instance, TextEdit is not a good option
   - Your preferred Spreadsheet Software: Excel, Numbers, etc.
 
@@ -73,7 +73,7 @@
 
 - Paste string into any text editor.
   - Text editors: Notepad, TextEdit, VSCode, Atom, Sublime Text, etc.
-    - Notepad comes preinstalled on PC
+    - Notepad comes preinstalled on Windows
     - TextEdit comes preinstalled on Mac (you'll need an extra step: see next line)
       - Open TextEdit, then at top menu click TextEdit > Preferences
       - Under 'Format' toggle from 'Rich text' over to 'Plain text'
