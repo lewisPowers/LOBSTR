@@ -42,11 +42,11 @@
   
   <img height="250" alt="Screen Shot 2022-08-13 at 8 32 34 PM" src="https://user-images.githubusercontent.com/52840741/184521315-353de06f-3da6-4b5d-a531-1c0996f9f50a.png"> <img height="250" alt="Screen Shot X" src="https://user-images.githubusercontent.com/52840741/184521597-05d370e6-22d7-4651-9543-08c014795149.png"> <img height="250" alt="Screen Shot 2022-08-13 at 8 33 26 PM" src="https://user-images.githubusercontent.com/52840741/184521339-ba6cbecc-c4c5-4cc9-b155-40966e243673.png">
 
-- Go to github.com/lewisPowers/LOBSTR (you're here!), click on lobstr.js file & click copy icon
+- Go to github.com/lewisPowers/LOBSTR (you're here!), click on lobstr.js file & click copy icon 
 
-<img height="260" alt="raw-circled" src="https://user-images.githubusercontent.com/52840741/184755761-37e02030-f22b-4df0-9406-9ec28af14492.png"> <img height="260" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
+  <img height="260" alt="Screen Shot 2022-08-13 at 8 39 03 PM" src="https://user-images.githubusercontent.com/52840741/184521482-8f0ab5aa-bf3e-41b1-99ef-973fe591f876.png"> <img height="260" alt="Screen Shot 2022-08-13 at 3 33 45 PM" src="https://user-images.githubusercontent.com/52840741/184521384-1a3a5f38-1d34-48bf-a88e-9b9a37691382.png">
  
-- Some browsers may not show a copy icon. In that case, instead click 'Raw' & select all and copy from there
+- Some browsers may not show a copy icon. In that case, instead click 'Raw' & select all and copy from there.
 
 <img height="250" alt="Screen Shot 2022-08-15 at 4 52 00 PM" src="https://user-images.githubusercontent.com/52840741/184755544-7a8eb7c0-2ec7-4580-84b3-7fcadc24ab2e.png"> <img height="250" alt="Screen Shot 2022-08-15 at 4 52 15 PM" src="https://user-images.githubusercontent.com/52840741/184755554-b24acbf5-8a01-4bd0-8397-027df414ff9a.png">
 
