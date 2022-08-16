@@ -1,8 +1,6 @@
 let trustedAssetsList = document.getElementsByClassName('trusted-asset-list')[0];
 let assetsArray = Array.from(trustedAssetsList.children);
-
-let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'));
-currencyAmountsArray = currencyAmountsArray.map(amount => {
+let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency')).map(amount => {
   return amount.textContent;
 })
 
@@ -97,7 +95,6 @@ function getAmountsInToken() {
 
 function getAmountsInCurrency() {
   return formattedAmounts.map( (array, i) => {
-    if (i === 14) console.log(array)
     return array[2];
   })
 }
@@ -116,6 +113,9 @@ function displayTotals() {
   }
 
   let namesArray = Object.keys(names);
+  namesArray.forEach((fnName) => {
+    createEl(fnName);
+  })
 
   function createEl(content) {
     let el = document.createElement('span');
@@ -123,10 +123,6 @@ function displayTotals() {
     el.textContent = names[content];
     document.getElementsByClassName('title-extra')[1].append(el)
   }
-
-  namesArray.forEach((fnName) => {
-    createEl(fnName);
-  })
 }
 
 console.log(
