@@ -30,17 +30,17 @@ function mergeInfoIntoCSVFormat(index) {
 }
 
 function allAssetsCount() {
-  return trustedAssetsList.children.length;
+  return assetsArray.length;
 }
 
 function filledAssetsCount() {
-  return Array.from(trustedAssetsList.children).filter((asset) => {
+  return assetsArray.filter((asset) => {
     if (!asset.children[1].textContent.includes(' 0 ')) return asset;
   }).length;
 }
 
 function unfilledAssetsCount() {
-  return Array.from(trustedAssetsList.children).filter((asset) => {
+  return assetsArray.filter((asset) => {
     if (asset.children[1].textContent.includes(' 0 ')) return asset;
   }).length;
 }
