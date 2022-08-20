@@ -1,8 +1,31 @@
+let util = {
+  getAssetData: () => {
+    return assetsArray.map( asset => {
+      return asset.children[0].children[0].children[1].textContent
+      .trim()
+      .split(' ')
+      .filter(str => {
+        if (str !== '' && str !== '\n') return str;
+      });
+    })
+  },
+  formatArrays: (namesCodesDomainsArray) => {
+    return namesCodesDomainsArray.map( assetArray => {
+      if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push(null);
+      while (assetArray.length > 3 && !assetArray[1].includes('(')) {
+        assetArray[0] = `${assetArray[0]} ${assetArray.splice(1, 1)}`;
+      }
+      let sliced =  assetArray[1].slice(1, -1);
+      assetArray[1] = sliced;
+      return assetArray;
+    })
+  }
+};
 let trustedAssetsList = document.querySelector('.trusted-asset-list');
 let assetsArray = Array.from(trustedAssetsList.children);
 let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
 .map( amount =>  amount.textContent );
-let formattedNamesAndCodesArray = formatArrays(getAssetData());
+let formattedNamesAndCodesArray = util.formatArrays(util.getAssetData());
 let namesArray = formattedNamesAndCodesArray.map( array => array[0] );
 let codesArray = assetsArray.map(asset => asset.dataset.assetCode );
 let tokensArray = assetsArray.map(asset => asset.dataset.raw_amount );
@@ -18,46 +41,26 @@ let totalBalance = currencyAmountsArray.reduce( (total, nextVal) => {
   return total + nextVal;
 }, 0 ).toFixed(2);
 
-function mergeAllAssetsInfoIntoCSVString() {
-  let len = assetsArray.length;
-  let array = [];
-  array[0] = `name,code,asset_amount,currency_amount,domain,asset_issuer`;
-  for (let i = 0; i < len; i++) array.push(mergeInfoIntoCSVFormat(i));
-  let result = array.join(`\n`);
-  console.log(result);
-}
+function csv() {
+  function mergeAllAssetsInfoIntoCSVString() {
+    let len = assetsArray.length;
+    let array = [];
+    array[0] = `name,code,asset_amount,currency_amount,domain,asset_issuer`;
+    for (let i = 0; i < len; i++) array.push(mergeInfoIntoCSVFormat(i));
+    let result = array.join(`\n`);
+    console.log(result);
+  }
 
-function mergeInfoIntoCSVFormat(index) {
-  let name = namesArray[index];
-  let code = codesArray[index];
-  let tokenCount = tokensArray[index];
-  let currencyAmount = currencyAmountsArray[index];
-  let domain = domainsArray[index];
-  let issuer = issuersArray[index] || ' ';
-  return `${name},${code},${tokenCount},${currencyAmount},${domain},${issuer}`;
-}
-
-function getAssetData() {
-  return assetsArray.map( asset => {
-    return asset.children[0].children[0].children[1].textContent
-    .trim()
-    .split(' ')
-    .filter(str => {
-      if (str !== '' && str !== '\n') return str;
-    });
-  })
-}
-
-function formatArrays(namesCodesDomainsArray) {
-  return namesCodesDomainsArray.map( assetArray => {
-    if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push(null);
-    while (assetArray.length > 3 && !assetArray[1].includes('(')) {
-      assetArray[0] = `${assetArray[0]} ${assetArray.splice(1, 1)}`;
-    }
-    let sliced =  assetArray[1].slice(1, -1);
-    assetArray[1] = sliced;
-    return assetArray;
-  })
+  function mergeInfoIntoCSVFormat(index) {
+    let name = namesArray[index];
+    let code = codesArray[index];
+    let tokenCount = tokensArray[index];
+    let currencyAmount = currencyAmountsArray[index];
+    let domain = domainsArray[index];
+    let issuer = issuersArray[index] || ' ';
+    return `${name},${code},${tokenCount},${currencyAmount},${domain},${issuer}`;
+  }
+  mergeAllAssetsInfoIntoCSVString();
 }
 
 function displayTotals() {
@@ -91,32 +94,43 @@ function displayTotals() {
   }
 }
 
-displayTotals();
-mergeAllAssetsInfoIntoCSVString();
-filterSystem();
-
 function filterSystem() {
   let div = document.createElement('div');
   div.classList.add('main-text');
-  div.innerText = 'Filter: '
+  div.innerText = 'Filter: ';
   let filterInput = document.createElement('input');
+  let assetCountElement = document.createElement('p');
+  let count = assetsArray.length;
+  assetCountElement.innerText = `Listed Assets: ${count}`;
   filterInput.type = 'text';
-  filterInput.placeholder = 'Search by asset name, code, domain or issuer'
+  filterInput.style.width = '100%';
+  filterInput.style.marginBottom = '20px';
+  filterInput.setAttribute('placeholder',  'Search by asset name, code, domain or issuer address');
   filterInput.addEventListener('input', e => {
+    count = 0;
     let text = e.target.value.trim().toLowerCase();
     e.preventDefault();
     assetsArray.filter( (asset, i) => {
-      if (namesArray[i].toLowerCase().includes(text) ||
-      codesArray[i].toLowerCase().includes(text) ||
-      domainsArray[i].toLowerCase().includes(text) ||
-      issuersArray[i].toLowerCase().includes(text)
-      ) {
+      if (textIsIncluded(text, i)) {
         asset.style.display = 'flex';
+        count++;
       } else {
         asset.style.display = 'none';
       }
     })
+    assetCountElement.innerText = `Assets: ${count}`;
   });
-  div.append(filterInput)
+  document.querySelector('.form-group').style.display = 'none';
+  div.append(filterInput, assetCountElement)
   document.getElementsByClassName('title-extra')[1].append(div);
+  function textIsIncluded(inputText, idx) {
+    return namesArray[idx].toLowerCase().includes(inputText) ||
+    codesArray[idx].toLowerCase().includes(inputText) ||
+    domainsArray[idx].toLowerCase().includes(inputText) ||
+    issuersArray[idx].toLowerCase().includes(inputText);
+  }
 }
+
+displayTotals();
+filterSystem();
+csv();
