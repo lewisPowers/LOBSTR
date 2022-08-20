@@ -1,24 +1,3 @@
-/* FILTER FEATURE REQUIREMENTS
-*
-*  IT SHOULD READ THE INPUT EACH TIME THE UNPUT VALUE CHANGES
-*
-*  IT SHOULD USE THE CURRENT INPUT AND CHECK IF ANY ASSETS INCLUDE THE STRING INPUT
-*
-*  RETURN/SHOW ALL ASSETS THAT INCLUDE STRING
-*
-*  AKA: HIDE ALL ASSET ELEMENTS THAT DO NOT INCLUDE STRING IN NAME
-*
-*  SEARCH PARAMS: SEARCH BY NAME, TOKEN SYMBOL, DOMAIN, ISSUER ADDRESS
-*    EXAMPLE INPUTS: 'XLM', 'LUMENS', 'ULTRASTELLAR.COM', AUGH5SHAV...5TDAA4SG
-*
-* HOW TO DO IT?
-*  - CHECK INPUT ON EACH ARRAY: NAMES, CODES, DOMAINS, ISSUERS
-*  - filterArrays = [ namesArray, codesArray,domainsArray, issuersArray ] ==> filterArrays.forEach(array)
-*  - event listener on input: onchange ==> filterArrays.forEach( array, i => {check for and return each asset from trustedAssets if input on change is included in any array})
-*    - return trustedAssets list[i]
-*    - multiple checks are possible: should we add a prop to ensure its been filtered already?
-*/
-
 let trustedAssetsList = document.querySelector('.trusted-asset-list');
 let assetsArray = Array.from(trustedAssetsList.children);
 let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
@@ -126,7 +105,6 @@ function filterSystem() {
   filterInput.addEventListener('input', e => {
     let text = e.target.value.trim().toLowerCase();
     e.preventDefault();
-    console.log('Change: ', text);
     assetsArray.filter( (asset, i) => {
       if (namesArray[i].toLowerCase().includes(text) ||
       codesArray[i].toLowerCase().includes(text) ||
