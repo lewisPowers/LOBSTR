@@ -21,6 +21,7 @@ let util = {
     })
   }
 };
+
 let trustedAssetsList = document.querySelector('.trusted-asset-list');
 let assetsArray = Array.from(trustedAssetsList.children);
 let formattedNamesAndCodesArray = util.formatArrays(util.getAssetData());
@@ -77,18 +78,29 @@ function displayTotals() {
   }
 
   let namesArray = Object.keys(names);
+  let titleEl = document.getElementsByClassName('title-extra')[1];
+  let assetInfoDiv = document.createElement('div');
+  assetInfoDiv.style.display = 'flex';
+  assetInfoDiv.style.justifyContent = 'space-around';
+  assetInfoDiv.style.marginTop = '8px';
+  titleEl.append(assetInfoDiv);
   namesArray.forEach((fnName) => {
-    createEl(fnName);
+    if (fnName === 'totalBalance') {
+      let el = createEl(fnName);
+      el.style.fontSize = '1.8em';
+      titleEl.append(el);
+    } else {
+      assetInfoDiv.append(createEl(fnName));
+    }
   })
 
   function createEl(content) {
     let el = document.createElement('span');
     el.style.display = 'block';
     el.style.lineHeight = '2em';
-    // el.style.fontWeight = 'bold';
     el.style.fontSize = '1.5em';
     el.textContent = names[content];
-    document.getElementsByClassName('title-extra')[1].append(el);
+    return el;
   }
 }
 
@@ -104,7 +116,7 @@ function filterSystem() {
   assetCountElement.innerText = `Listed Assets: ${count}`;
   filterInput.type = 'text';
   filterInput.style.width = '100%';
-  filterInput.style.marginBottom = '11px';
+  filterInput.style.margin = '11px 0';
   filterInput.setAttribute('placeholder', 'Filter by asset name, code, domain or issuer address');
   filterInput.addEventListener('input', e => {
     count = 0;
