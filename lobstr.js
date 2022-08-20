@@ -9,7 +9,7 @@ let tokensArray = assetsArray.map(asset => asset.dataset.raw_amount );
 let domainsArray = formattedNamesAndCodesArray.map( array => {
   return array[2] === null ? 'No Domain' : array[2];
 });
-let issuersArray = assetsArray.map( asset => asset.dataset.assetIssuer );
+let issuersArray = assetsArray.map( asset => asset.dataset.assetIssuer || ' ' );
 
 let symbol;
 let totalBalance = currencyAmountsArray.reduce( (total, nextVal) => {
@@ -33,7 +33,7 @@ function mergeInfoIntoCSVFormat(index) {
   let tokenCount = tokensArray[index];
   let currencyAmount = currencyAmountsArray[index];
   let domain = domainsArray[index];
-  let issuer = issuersArray[index] || null;
+  let issuer = issuersArray[index] || ' ';
   return `${name},${code},${tokenCount},${currencyAmount},${domain},${issuer}`;
 }
 
