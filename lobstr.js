@@ -71,9 +71,9 @@ function displayTotals() {
 
   let names = {
     allAssetsCount: `Total Assets: ${assetsArray.length}`,
-    filledAssetsCount: `Total Filled Assets: ${filledAssetsCount}`,
-    unfilledAssetsCount: `Total Uncharted Assets: ${unfilledAssetsCount}`,
-    totalBalance: `Total Balance: ${symbol}${totalBalance}`
+    filledAssetsCount: `Filled Assets: ${filledAssetsCount}`,
+    unfilledAssetsCount: `Uncharted Assets: ${unfilledAssetsCount}`,
+    totalBalance: `Balance: ${symbol}${totalBalance}`
   }
 
   let namesArray = Object.keys(names);
@@ -85,7 +85,8 @@ function displayTotals() {
     let el = document.createElement('span');
     el.style.display = 'block';
     el.style.lineHeight = '2em';
-    el.style.fontWeight = 'bold';
+    // el.style.fontWeight = 'bold';
+    el.style.fontSize = '1.5em';
     el.textContent = names[content];
     document.getElementsByClassName('title-extra')[1].append(el);
   }
