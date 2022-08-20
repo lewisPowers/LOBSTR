@@ -11,7 +11,7 @@ let util = {
   },
   formatArrays: (namesCodesDomainsArray) => {
     return namesCodesDomainsArray.map( assetArray => {
-      if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push(null);
+      if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push('No Domain');
       while (assetArray.length > 3 && !assetArray[1].includes('(')) {
         assetArray[0] = `${assetArray[0]} ${assetArray.splice(1, 1)}`;
       }
@@ -27,9 +27,7 @@ let formattedNamesAndCodesArray = util.formatArrays(util.getAssetData());
 let namesArray = formattedNamesAndCodesArray.map( array => array[0] );
 let codesArray = assetsArray.map(asset => asset.dataset.assetCode );
 let tokensArray = assetsArray.map(asset => asset.dataset.raw_amount );
-let domainsArray = formattedNamesAndCodesArray.map( array => {
-  return array[2] === null ? 'No Domain' : array[2];
-});
+let domainsArray = formattedNamesAndCodesArray.map( array => array[2] );
 let issuersArray = assetsArray.map( asset => asset.dataset.assetIssuer || ' ' );
 let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
 .map( amount =>  amount.textContent );
@@ -94,17 +92,19 @@ function displayTotals() {
 }
 
 function filterSystem() {
+  document.getElementsByClassName('title-extra')[1].style.marginBottom = '0';
   let div = document.createElement('div');
   div.classList.add('main-text');
-  div.innerText = 'Filter: ';
+  div.style.marginTop = '20px';
+  div.innerText = 'Filter Your Assets List';
   let filterInput = document.createElement('input');
-  let assetCountElement = document.createElement('p');
+  let assetCountElement = document.createElement('span');
   let count = assetsArray.length;
   assetCountElement.innerText = `Listed Assets: ${count}`;
   filterInput.type = 'text';
   filterInput.style.width = '100%';
-  filterInput.style.marginBottom = '20px';
-  filterInput.setAttribute('placeholder', 'Search by asset name, code, domain or issuer address');
+  filterInput.style.marginBottom = '11px';
+  filterInput.setAttribute('placeholder', 'Filter by asset name, code, domain or issuer address');
   filterInput.addEventListener('input', e => {
     count = 0;
     let text = e.target.value.trim().toLowerCase();
@@ -129,7 +129,6 @@ function filterSystem() {
     issuersArray[idx].toLowerCase().includes(inputText);
   }
 }
-
 displayTotals();
 filterSystem();
 csv();
