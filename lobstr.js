@@ -23,8 +23,6 @@ let util = {
 };
 let trustedAssetsList = document.querySelector('.trusted-asset-list');
 let assetsArray = Array.from(trustedAssetsList.children);
-let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
-.map( amount =>  amount.textContent );
 let formattedNamesAndCodesArray = util.formatArrays(util.getAssetData());
 let namesArray = formattedNamesAndCodesArray.map( array => array[0] );
 let codesArray = assetsArray.map(asset => asset.dataset.assetCode );
@@ -33,7 +31,8 @@ let domainsArray = formattedNamesAndCodesArray.map( array => {
   return array[2] === null ? 'No Domain' : array[2];
 });
 let issuersArray = assetsArray.map( asset => asset.dataset.assetIssuer || ' ' );
-
+let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
+.map( amount =>  amount.textContent );
 let symbol;
 let totalBalance = currencyAmountsArray.reduce( (total, nextVal) => {
   symbol = nextVal.slice(0, 1);
@@ -90,7 +89,7 @@ function displayTotals() {
     el.style.lineHeight = '2em';
     el.style.fontWeight = 'bold';
     el.textContent = names[content];
-    document.getElementsByClassName('title-extra')[1].append(el)
+    document.getElementsByClassName('title-extra')[1].append(el);
   }
 }
 
@@ -105,7 +104,7 @@ function filterSystem() {
   filterInput.type = 'text';
   filterInput.style.width = '100%';
   filterInput.style.marginBottom = '20px';
-  filterInput.setAttribute('placeholder',  'Search by asset name, code, domain or issuer address');
+  filterInput.setAttribute('placeholder', 'Search by asset name, code, domain or issuer address');
   filterInput.addEventListener('input', e => {
     count = 0;
     let text = e.target.value.trim().toLowerCase();
@@ -118,7 +117,7 @@ function filterSystem() {
         asset.style.display = 'none';
       }
     })
-    assetCountElement.innerText = `Assets: ${count}`;
+    assetCountElement.innerText = `Listed Assets: ${count}`;
   });
   document.querySelector('.form-group').style.display = 'none';
   div.append(filterInput, assetCountElement)
