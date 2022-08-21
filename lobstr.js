@@ -1,5 +1,5 @@
 let util = {
-  getAssetData: () => {
+  formatData: () => {
     return assetsArray.map( asset => {
       return asset.children[0].children[0].children[1].textContent
       .trim()
@@ -24,7 +24,7 @@ let util = {
 
 let trustedAssetsList = document.querySelector('.trusted-asset-list');
 let assetsArray = Array.from(trustedAssetsList.children);
-let formattedNamesAndCodesArray = util.formatArrays(util.getAssetData());
+let formattedNamesAndCodesArray = util.formatArrays(util.formatData());
 let namesArray = formattedNamesAndCodesArray.map( array => array[0] );
 let codesArray = assetsArray.map(asset => asset.dataset.assetCode );
 let tokensArray = assetsArray.map(asset => asset.dataset.raw_amount );
@@ -111,17 +111,17 @@ function filterSystem() {
   div.style.marginTop = '20px';
   div.innerText = 'Filter Your Assets List';
   let filterInput = document.createElement('input');
-  let assetCountElement = document.createElement('span');
-  let count = assetsArray.length;
-  assetCountElement.innerText = `Listed Assets: ${count}`;
   filterInput.type = 'text';
   filterInput.style.width = '100%';
   filterInput.style.margin = '11px 0';
   filterInput.setAttribute('placeholder', 'Filter by asset name, code, domain or issuer address');
-  filterInput.addEventListener('input', e => {
+  let count = assetsArray.length;
+  let assetCountElement = document.createElement('span');
+  assetCountElement.innerText = `Listed Assets: ${count}`;
+  filterInput.addEventListener('input', event => {
     count = 0;
-    let text = e.target.value.trim().toLowerCase();
-    e.preventDefault();
+    let text = event.target.value.trim().toLowerCase();
+    event.preventDefault();
     assetsArray.filter( (asset, i) => {
       if (textIsIncluded(text, i)) {
         asset.style.display = 'flex';
@@ -130,7 +130,7 @@ function filterSystem() {
         asset.style.display = 'none';
       }
     })
-    assetCountElement.innerText = `Listed Assets: ${count}`;
+    assetCountElement.innerText = `Filtered Assets: ${count}`;
   });
   document.querySelector('.form-group').style.display = 'none';
   div.append(filterInput, assetCountElement)
