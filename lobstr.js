@@ -5,7 +5,6 @@ let util = {
       .trim()
       .split(' ')
       .filter(str => {
-        // if (str.includes(',')) return str.split(',').join('');
         if (str !== '' && str !== '\n') return str;
       });
     })
@@ -17,7 +16,6 @@ let util = {
         return info;
       })
       if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push('No Domain');
-      // if (assetArray[0].includes(',')) assetArray[0] = assetArray[0].split(',').join('');
       while ( assetArray[1] !== assetArray[1].toUpperCase() && assetArray.length > 3 ) {
         assetArray[0] = `${assetArray[0]} ${assetArray.splice(1, 1)}`;
       }
