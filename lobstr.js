@@ -5,14 +5,20 @@ let util = {
       .trim()
       .split(' ')
       .filter(str => {
+        // if (str.includes(',')) return str.split(',').join('');
         if (str !== '' && str !== '\n') return str;
       });
     })
   },
   formatArrays: (namesCodesDomainsArray) => {
-    return namesCodesDomainsArray.map( assetArray => {
+    return namesCodesDomainsArray.map( (assetArray, index) => {
+      assetArray = assetArray.map( info => {
+        if (info.includes(',')) return info.split(',').join('');
+        return info;
+      })
       if (!assetArray[assetArray.length - 1].includes('.')) assetArray.push('No Domain');
-      while (assetArray.length > 3 && !assetArray[1].includes('(')) {
+      // if (assetArray[0].includes(',')) assetArray[0] = assetArray[0].split(',').join('');
+      while ( assetArray[1] !== assetArray[1].toUpperCase() && assetArray.length > 3 ) {
         assetArray[0] = `${assetArray[0]} ${assetArray.splice(1, 1)}`;
       }
       let sliced =  assetArray[1].slice(1, -1);
@@ -24,14 +30,15 @@ let util = {
 
 let trustedAssetsList = document.querySelector('.trusted-asset-list');
 let assetsArray = Array.from(trustedAssetsList.children);
-let formattedNamesAndCodesArray = util.formatArrays(util.formatData());
+let formattedData = util.formatData();
+let formattedNamesAndCodesArray = util.formatArrays(formattedData);
 let namesArray = formattedNamesAndCodesArray.map( array => array[0] );
 let codesArray = assetsArray.map(asset => asset.dataset.assetCode );
 let tokensArray = assetsArray.map(asset => asset.dataset.raw_amount );
 let domainsArray = formattedNamesAndCodesArray.map( array => array[2] );
 let issuersArray = assetsArray.map( asset => asset.dataset.assetIssuer || ' ' );
 let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
-.map( amount =>  amount.textContent );
+.map( amount => amount.textContent );
 let symbol;
 let totalBalance = currencyAmountsArray.reduce( (total, nextVal) => {
   symbol = nextVal.slice(0, 1);
@@ -53,7 +60,7 @@ function csv() {
     let name = namesArray[index];
     let code = codesArray[index];
     let tokenCount = tokensArray[index];
-    let currencyAmount = currencyAmountsArray[index];
+    let currencyAmount = currencyAmountsArray[index] || '0';
     let domain = domainsArray[index];
     let issuer = issuersArray[index] || ' ';
     return `${name},${code},${tokenCount},${currencyAmount},${domain},${issuer}`;
@@ -142,6 +149,6 @@ function filterSystem() {
     issuersArray[idx].toLowerCase().includes(inputText);
   }
 }
+csv();
 displayTotals();
 filterSystem();
-csv();
