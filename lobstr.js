@@ -69,7 +69,7 @@ function csv() {
 }
 
 function displayTotals() {
-
+  if (!displayTotals.hasRun) {
     displayTotals.hasRun = true;
     let filledAssetsCount = assetsArray.filter( asset => {
       if (!asset.children[1].textContent.includes(' 0 ')) return asset;
@@ -111,11 +111,11 @@ function displayTotals() {
       el.textContent = names[content];
       return el;
     }
-
+  }
 }
 
 function filterSystem() {
-
+  if (!filterSystem.hasRun) {
     filterSystem.hasRun = true;
     document.getElementsByClassName('title-extra')[1].style.marginBottom = '0';
     let div = document.createElement('div');
@@ -153,7 +153,7 @@ function filterSystem() {
       domainsArray[idx].toLowerCase().includes(inputText) ||
       issuersArray[idx].toLowerCase().includes(inputText);
     }
-
+  }
 }
 
 csv();
