@@ -20,9 +20,16 @@
 
 - Data is extracted on the client side - no worries about third party interference or needless HTTP requests
 
-- Generate a new, updated spreadsheet as often as you want 
+- Generate a new, updated spreadsheet as often as you want
+
+- Helpful Tip: Save your .CSV file as a .XSLX file to preserve your spreadsheet formatting.
  
-- Extra feature: displays the counts of your total trustlines and 'uncharted' assets on the browser window
+- Extra features:
+  - Displays the counts of your total trustlines and 'uncharted' assets on the browser window
+  - Asset filter: filter and get count of all of your assets that match your search text
+  
+- Updates:
+  - 23 Aug '22: Filter system added, element styles edited
 
 ## ___What you need___
 
