@@ -9,8 +9,8 @@ let util = {
       });
     })
   },
-  formatArrays: (namesCodesDomainsArray) => {
-    return namesCodesDomainsArray.map( (assetArray, index) => {
+  formatArrays: (arrays) => {
+    return arrays.map( (assetArray, index) => {
       assetArray = assetArray.map( info => {
         if (info.includes(',')) return info.split(',').join('');
         return info;
@@ -35,11 +35,13 @@ let codesArray = assetsArray.map(asset => asset.dataset.assetCode );
 let tokensArray = assetsArray.map(asset => asset.dataset.raw_amount );
 let domainsArray = formattedNamesAndCodesArray.map( array => array[2] );
 let issuersArray = assetsArray.map( asset => asset.dataset.assetIssuer || ' ' );
-let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
-.map( amount => amount.textContent );
 let symbol;
+let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('alternative_currency'))
+.map( amount => {
+  symbol = symbol || amount.textContent.slice(0, 1);
+  return amount.textContent.slice(1);
+});
 let totalBalance = currencyAmountsArray.reduce( (total, nextVal) => {
-  symbol = nextVal.slice(0, 1);
   nextVal = Number(nextVal.slice(1));
   return total + nextVal;
 }, 0 ).toFixed(2);
@@ -48,7 +50,7 @@ function csv() {
   function mergeAllAssetsInfoIntoCSVString() {
     let len = assetsArray.length;
     let array = [];
-    array[0] = `name,code,asset_amount,currency_amount,domain,asset_issuer`;
+    array[0] = `name,code,asset_amount,currency_amount(${symbol}),domain,asset_issuer`;
     for (let i = 0; i < len; i++) {
       if (assetsArray[i].style.display !== 'none') array.push(mergeInfoIntoCSVFormat(i));
     }
