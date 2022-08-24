@@ -20,9 +20,13 @@
 
 - Data is extracted on the client side - no worries about third party interference or needless HTTP requests
 
-- Generate a new, updated spreadsheet as often as you want 
+- Generate a new, updated spreadsheet as often as you want
+
+- Helpful Tip: Save your .CSV file as a .XSLX file to preserve your spreadsheet formatting.
  
-- Extra feature: displays the counts of your total trustlines and 'uncharted' assets on the browser window
+- Extra features:
+  - Displays the counts of your total trustlines and 'uncharted' assets on the browser window
+  - Asset filter: filter and get count of all of your assets that match your search text
 
 ## ___What you need___
 
@@ -87,6 +91,10 @@
   <img width="650" alt="Screen Shot 2022-08-13 at 8 31 10 PM" src="https://user-images.githubusercontent.com/52840741/184521436-60ed045e-6512-4573-91ad-2de7dac5fc03.png">
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets & respective info, anytime!
+
+# Changelog
+
+  - 23 Aug '22: Filter system added; element styles edited; call function w/ 'csv()'
 
 ### [Watch Video Tutorial](https://youtu.be/EVYUjsRSu9U "Watch tutorial")
 
