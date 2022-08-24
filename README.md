@@ -93,9 +93,14 @@
   
 ### Repeat this process as often as you'd like to make a snapshot of your assets & respective info, anytime!
 
+  - #### Want a list of ONLY your filtered assets?
+
+  - #### Just type 'csv()' into the console and press Enter!
+
 # Changelog
 
   - 23 Aug '22: Filter system added; element styles edited; call function w/ 'csv()'
+  - 24 Aug '22: removed currency symbol from 'currency_amount' rows; added symbol to 'currency_amount' column title
 
 ### [Watch Video Tutorial](https://youtu.be/EVYUjsRSu9U "Watch tutorial")
 
