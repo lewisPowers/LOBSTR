@@ -26,6 +26,7 @@
  
 - Extra features:
   - Displays the counts of your total trustlines and 'uncharted' assets on the browser window
+  - Displays the total balance of all your assets
   - Asset filter: filter and get count of all of your assets that match your search text
 
 ## ___What you need___
