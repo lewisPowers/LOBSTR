@@ -1,4 +1,12 @@
 let util = {
+  runOnce: (func) => {
+    if (!func.hasRun) {
+      func.hasRun = true;
+      func();
+    } else {
+      console.log(`${func.name} has already been called`)
+    }
+  },
   formatData: () => {
     return assetsArray.map( asset => {
       return asset.children[0].children[0].children[1].textContent
@@ -23,6 +31,17 @@ let util = {
       assetArray[1] = sliced;
       return assetArray;
     })
+  },
+  init: () => {
+    util.runOnce(displayTotals);
+    util.runOnce(filterSystem);
+    csv();
+  },
+  getBalance: (array) => {
+    return array.reduce( (total, nextVal) => {
+      nextVal = Number(nextVal);
+      return total + nextVal;
+    }, 0 ).toFixed(2);
   }
 };
 
@@ -42,7 +61,7 @@ let currencyAmountsArray = Array.from(trustedAssetsList.getElementsByClassName('
   return amount.textContent.slice(1);
 });
 let totalBalance = currencyAmountsArray.reduce( (total, nextVal) => {
-  nextVal = Number(nextVal.slice(1));
+  nextVal = Number(nextVal);
   return total + nextVal;
 }, 0 ).toFixed(2);
 
@@ -71,8 +90,6 @@ function csv() {
 }
 
 function displayTotals() {
-  if (!displayTotals.hasRun) {
-    displayTotals.hasRun = true;
     let filledAssetsCount = assetsArray.filter( asset => {
       if (!asset.children[1].textContent.includes(' 0 ')) return asset;
     }).length;
@@ -113,12 +130,9 @@ function displayTotals() {
       el.textContent = names[content];
       return el;
     }
-  }
 }
 
 function filterSystem() {
-  if (!filterSystem.hasRun) {
-    filterSystem.hasRun = true;
     document.getElementsByClassName('title-extra')[1].style.marginBottom = '0';
     let div = document.createElement('div');
     div.classList.add('main-text');
@@ -144,20 +158,19 @@ function filterSystem() {
           asset.style.display = 'none';
         }
       })
-      assetCountElement.innerText = `Filtered Assets: ${count}`;
+      assetCountElement.innerText = `Filtered Matches: ${count}`;
     });
+
     document.querySelector('.form-group').style.display = 'none';
     div.append(filterInput, assetCountElement)
     document.getElementsByClassName('title-extra')[1].append(div);
+
     function textIsIncluded(inputText, idx) {
       return namesArray[idx].toLowerCase().includes(inputText) ||
       codesArray[idx].toLowerCase().includes(inputText) ||
       domainsArray[idx].toLowerCase().includes(inputText) ||
       issuersArray[idx].toLowerCase().includes(inputText);
     }
-  }
 }
 
-csv();
-displayTotals();
-filterSystem();
+util.init();
