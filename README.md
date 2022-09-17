@@ -71,6 +71,11 @@
   
   <img width="500" alt="Screen Shot 2022-08-14 at 1 59 55 PM" src="https://user-images.githubusercontent.com/52840741/184554773-9cc5ae27-77c4-4a11-8ef1-cadc14ef8924.png">
   
+- If you're using Safari and not seeing the output, this screenshot and link may be helpful:
+
+<img width="500" alt="Screen Shot 2022-09-16 at 4 53 31 PM" src="https://user-images.githubusercontent.com/52840741/190834887-a03dbd9c-43c3-4320-8139-f2be80d734d5.png">
+
+[Safari console log solution](https://stackoverflow.com/questions/12015540/console-log-doesnt-work-in-safari-6-0-web-inspector)  
   
 - Notice the new information displayed on the webpage?
 
@@ -97,11 +102,6 @@
 
   - #### Just type 'csv()' into the console and press Enter!
 
-# Changelog
-
-  - 23 Aug '22: Filter system added; element styles edited; call function w/ 'csv()'
-  - 24 Aug '22: removed currency symbol from 'currency_amount' rows; added symbol to 'currency_amount' column title
-
 ### [Watch Video Tutorial](https://youtu.be/EVYUjsRSu9U "Watch tutorial")
 
 ### [Cheatsheet & FAQ](https://docs.google.com/document/d/1mYQdCSH4qxHTqy9oGd49UH2HLA0PU5u4HPtqDZnJKqQ/edit?usp=sharing "Get the cheatsheet")
@@ -119,3 +119,9 @@ Please feel free to let me know! Telegram: @Aquarian_Diver
 #### xlmlp*lobstr.co
 
 #### Thank you for your support!
+
+# Changelog
+
+  - 23 Aug '22: Filter system added; element styles edited; call function w/ 'csv()'
+  - 24 Aug '22: Removed currency symbol from 'currency_amount' rows; added symbol to 'currency_amount' column title
+  - 16 Sep '22: Bug in total balance fixed; extra info for Safari users 
